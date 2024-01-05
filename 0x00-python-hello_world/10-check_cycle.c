@@ -11,7 +11,7 @@
   */
 int check_cycle(listint_t *head)
 {
-	listint_t *s, *;
+	listint_t *s, *f;
 	int flag = 0;
 
 	if (head == NULL)
