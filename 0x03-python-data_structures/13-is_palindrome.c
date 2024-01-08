@@ -1,6 +1,6 @@
 #include "lists.h"
 
-int aux_palind(listint_t **head, listint_t *end);
+int aux_palindrome(listint_t **head, listint_t *end);
 /**
  * is_palindrome -  recursive palindrome or not
  * @head: head list
