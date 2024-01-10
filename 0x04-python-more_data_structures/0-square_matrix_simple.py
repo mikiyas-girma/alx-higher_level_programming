@@ -3,5 +3,5 @@ def square_matrix_simple(matrix=[]):
     simple_square_matrix = []
 
     for b in matrix:
-        square_matrix.append(list(a ** 2 for a in b))
+        simple_square_matrix.append(list(a ** 2 for a in b))
     return simple_square_matrix
