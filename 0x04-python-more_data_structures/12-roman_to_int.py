@@ -1,24 +1,18 @@
+#!/usr/bin/python3
 def roman_to_int(roman_string):
-    roman_equivalent = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    }
+    a_dictionary = {'M': 1000,
+                    'D': 500,
+                    'C': 100,
+                    'L': 50,
+                    'X': 10,
+                    'V': 5,
+                    'I': 1}
     if roman_string is None or not isinstance(roman_string, str):
         return 0
+    prev, integer = 0, 0
 
-    s_list = list(roman_string)
-    int_value = 0
-
-    for i in range(len(s_list)):
-        if i < len(s_list) - 1 and
-        roman_equivalent[s_list[i]] < roman_equivalent[s_list[i + 1]]:
-            int_value -= roman_equivalent[s_list[i]]
-        else:
-            int_value += roman_equivalent[s_list[i]]
-
-    return int_value
+    for x in roman_string:
+        integer += a_dictionary[x] if a_dictionary[x] <= prev \
+                else a_dictionary[x] - prev * 2
+        prev = a_dictionary[x]
+    return integer
