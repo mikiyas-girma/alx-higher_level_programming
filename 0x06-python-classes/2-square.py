@@ -14,8 +14,8 @@ class Square:
         __size (int): private instance variable
     
     Raises:
-        TypeError: the ``__size`` is not type of int
-        ValueError: the ``__size`` must be greater than 0
+        TypeError: the ``__size`` is not type of int.
+        ValueError: the ``__size`` must be greater than 0.
     """
 
     def __init__(self, size=0):
@@ -26,6 +26,3 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-
-
-s = Square('2')
