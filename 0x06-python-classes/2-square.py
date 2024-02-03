@@ -12,7 +12,7 @@ class Square:
 
     Attributes:
         __size (int): private instance variable
-    
+
     Raises:
         TypeError: the ``__size`` is not type of int.
         ValueError: the ``__size`` must be greater than 0.
