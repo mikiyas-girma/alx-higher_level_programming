@@ -64,7 +64,3 @@ class Square:
                 print()
         else:
             print()
-
-
-sq = Square()
-sq.my_print()
