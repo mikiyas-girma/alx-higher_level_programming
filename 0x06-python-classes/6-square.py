@@ -28,7 +28,7 @@ class Square:
         Returns:
             the current area of the square
         """
-        return self.__size * self.__size
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -72,21 +72,21 @@ class Square:
         Args:
             value(tuple): the position to be assigned to the square
         """
-        if isinstance(value, tuple):
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """ function that prints '#' symbol with size of the square based
          on its position
            """
-        if self.__size > 0:
+        if self.__size == 0:
+            print('')
+        else:
             print('{}'.format('\n' * self.__position[1]), end='')
             for i in range(self.__size):
                 print('{}{}'.format(' ' * self.__position[0],
                                     '#' * self.__size))
-        else:
-            print()
