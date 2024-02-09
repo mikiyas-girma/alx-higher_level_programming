@@ -32,7 +32,7 @@ class Node:
         Returns:
             int: the data of the next node
         '''
-        return self.__nextnode
+        return self.__next_node
 
     @data.setter
     def data(self, value):
