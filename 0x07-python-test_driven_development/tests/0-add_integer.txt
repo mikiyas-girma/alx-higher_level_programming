@@ -1,0 +1,32 @@
+using txt file for testing purposes
+
+it is used to test the function ``add_integer()``.
+
+``add_integer()`` returns the sum of its arguments
+
+# importing necessary modules so that the test to run
+>>> from importlib import import_module
+>>> add_integer = import_module('0-add_integer').add_integer
+
+# now lets test our function
+
+>>> add_integer(2, 5)
+7
+
+it works also with floating numbers
+
+>>> add_integer(2.0, 3.0)
+5
+>>> add_integer(2.5, 3.9)
+5
+
+
+# test for invalid arguments
+>>> try:
+...     add_integer(1, 1)
+...     add_integer('two', 1)
+...     add_integer(None, 1)
+... except TypeError as ex:
+...     print(ex.args[0])
+2
+a must be an integer
