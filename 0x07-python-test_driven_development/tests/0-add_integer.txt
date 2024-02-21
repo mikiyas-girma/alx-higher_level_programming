@@ -22,10 +22,10 @@ it works also with floating numbers
 
 >>> add_integer(2, 3.0)
 5
->>> add_integer(2.0, 3)
-5
->>> add_integer(2.5, 3.9)
-5
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
 
 # missing one argument
 >>> add_integer()
