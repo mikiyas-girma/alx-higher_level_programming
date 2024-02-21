@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""this module contains function to add its
+arguments and returns the int
+"""
+
 
 def add_integer(a, b=98):
     """this function returns the sum of its arguments"""
