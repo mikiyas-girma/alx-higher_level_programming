@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+
     """ the function prints two newlines after if it catches
         . or : or ? in the text given to the function
     """
@@ -13,8 +14,9 @@ def text_indentation(text):
     for char in text:
         sentence += char
         if char in '.?:':
-            res.append(sentence.strip())
+            res.append(sentence.strip() + '\n\n')
             sentence = ""
-    if sentence:
-        res.append(sentence.strip())
-    print('\n'.join(res))
+    res.append(sentence.strip())
+    for i in res:
+        print(i, end='')
+    print()
