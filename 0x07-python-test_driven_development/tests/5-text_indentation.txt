@@ -1,0 +1,17 @@
+this file contain tests for ``text_indentation()`` function
+
+# import necessary lib and modules
+
+>>> from importlib import import_module
+>>> text_indentation = import_module('5-text_indentation').text_indentation
+
+# now start testing the function
+
+>>> text_indentation('this is mikiyas. age 22 and known for? programmer') #doctest: +REPORT_NDIFF
+this is mikiyas.
+<BLANKLINE>
+<BLANKLINE>
+ age 22 and known for?
+<BLANKLINE>
+<BLANKLINE>
+ programmer
