@@ -17,4 +17,4 @@ def text_indentation(text):
             sentence = ""
     if sentence:
         res.append(sentence.strip())
-    print('\n\n'.join(res))
+    print('\n'.join(res))
