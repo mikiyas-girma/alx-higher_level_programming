@@ -7,12 +7,12 @@ this file contain tests for ``text_indentation()`` function
 
 # now start testing the function
 
->>> text_indentation('this is mikiyas. age 22 and known for? programmer') #doctest: -REPORT_NDIFF
+>>> text_indentation('this is mikiyas. age 22 and known for? programmer') #doctest: -NORMALIZE_WHITESPACE
 this is mikiyas.
 <BLANKLINE>
- age 22 and known for?
+age 22 and known for?
 <BLANKLINE>
- programmer
+programmer
 
 >>> text_indentation(123)
 Traceback (most recent call last):

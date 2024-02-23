@@ -3,13 +3,19 @@
 
 
 def text_indentation(text):
-    """the function prints two newlines after if it catches
-    . or : or ? in the text given to the function"""
+
+    """ the function prints two newlines after if it catches
+        . or : or ? in the text given to the function
+    """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
+    res = []
+    sentence = ""
     for char in text:
-        if char in ('.', ':', '?'):
-            print(char)
-            print()
-        else:
-            print(char, end='')
+        sentence += char
+        if char in '.?:':
+            res.append(sentence.strip() + '\n\n')
+            sentence = ""
+    res.append(sentence.strip())
+
+    return ''.join(res)
