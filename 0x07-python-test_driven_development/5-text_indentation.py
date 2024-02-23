@@ -19,4 +19,3 @@ def text_indentation(text):
     res.append(sentence.strip())
     for i in res:
         print(i, end='')
-    print()
