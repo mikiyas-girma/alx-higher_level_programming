@@ -20,14 +20,13 @@ def matrix_divided(matrix, div):
         raise TypeError(messages[0])
     if not all(isinstance(num, (int, float)) for row in matrix for num in row):
         raise TypeError(messages[0])
-    if not all(len(row) for row in matrix):
+    if not all(len(row) == len(matrix[0]) for row in matrix):
         raise TypeError(messages[1])
     if not isinstance(div, (int, float)):
         raise TypeError(messages[2])
     if div == 0:
         raise ZeroDivisionError(messages[3])
     newmat = []
-    mod = list(map(lambda x: round(x / div, 2), row) for row in matrix)
-    newmat.append(mod)
+    newmat = [list(map(lambda x: round(x / div, 2), row)) for row in matrix]
 
     return newmat
