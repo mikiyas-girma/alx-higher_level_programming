@@ -69,7 +69,7 @@ ValueError: shapes (1,3) and (1,3) not aligned: 3 (dim 1) != 1 (dim 0)
 >>> lazy_matrix_mul([[1, 2, 3], [1, 2]], [[1, 2, 3], [1, 2, 3]])
 Traceback (most recent call last):
     ...
-ValueError: setting an array element with a sequence
+ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2, 3], [1, 2, 3]], [[1, 2, 3], [1, 2]])
 Traceback (most recent call last):
@@ -95,4 +95,4 @@ TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 
 
 
 >>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
-array[[13, 16]]
+array([[13, 16]])
