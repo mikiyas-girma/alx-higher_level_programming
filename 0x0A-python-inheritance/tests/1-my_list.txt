@@ -14,9 +14,16 @@ this file contains tests for ``print_sorted()`` function in ``1-my_list`` module
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
+>>> my_list
+[1, 4, 2, 3, 5]
+
 # printing sorted list
 >>> print_sorted(my_list)
 [1, 2, 3, 4, 5]
+
+>>> sorted_list = print_sorted(my_list)
+>>> sorted_list
+False
 
 >>> my_list2 = MyList()
 >>> my_list2.append(-4)
@@ -28,7 +35,3 @@ this file contains tests for ``print_sorted()`` function in ``1-my_list`` module
 
 >>> print_sorted([])
 []
-
->>> print(id(my_list) != id(print_sorted(my_list)))
-[1, 2, 3, 4, 5]
-True
