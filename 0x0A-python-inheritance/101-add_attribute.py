@@ -3,6 +3,7 @@
 
 
 def add_attribute(obj, attr, value):
+    """checks the object and add a passed attribute"""
     if hasattr(obj, '__dict__'):
         obj.__setattr__(attr, value)
     else:
