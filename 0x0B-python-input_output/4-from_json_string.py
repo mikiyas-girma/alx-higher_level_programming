@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import json
-"""contains one function """
+"""contains one function used in IO functions """
 
 
 def from_json_string(my_str):
