@@ -9,10 +9,12 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
     """contains a function to instantiate a rectangle"""
     def __init__(self, width, height):
-        if self.integer_validator('width', width):
-            self.__width = width
-        if self.integer_validator('height', height):
-            self.__height = height
+        """calls __init__ of parent class and instantiate its object"""
+        super().__init__()
+        self.integer_validator('width', width)
+        self.integer_validator('height', height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """returns area of the rectangle"""
