@@ -3,7 +3,7 @@
 
 
 class MyInt(int):
-    """the class contains function that inverts builtin 
+    """the class contains function that inverts builtin
         implementation of == and !="""
     def __init__(self, param1):
         self.param1 = param1
