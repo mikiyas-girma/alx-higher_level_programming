@@ -10,6 +10,6 @@ class Rectangle(BaseGeometry):
     """contains a function to instantiate a rectangle"""
     def __init__(self, width, height):
         if (self.integer_validator('width', width) and
-                self('height', height)):
+                self.integer_validator('height', height)):
             self.__width = width
             self.__height = height
