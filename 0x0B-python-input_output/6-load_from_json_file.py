@@ -10,4 +10,4 @@ def load_from_json_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         for line in f.readlines():
             lines.append(line)
-    json.JSONDecoder().decode(''.join(lines))
+    return json.JSONDecoder().decode(''.join(lines))
