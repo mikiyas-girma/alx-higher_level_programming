@@ -14,34 +14,42 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
-    def get_width(self):
+    @property
+    def width(self):
         """returns width"""
         return self.__width
 
-    def set_width(self, value):
+    @width.setter
+    def width(self, value):
         """sets the width"""
         self.__width = value
 
-    def get_height(self):
+    @property
+    def height(self):
         """returns height"""
         return self.__height
 
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         """sets height"""
         self.__height = value
 
-    def get_x(self):
+    @property
+    def x(self):
         """returns the value x"""
         return self.__x
 
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         """sets the value for x"""
         self.__x = value
 
-    def get_y(self):
+    @property
+    def y(self):
         """returns the value of y"""
         return self.__y
 
-    def set_y(self, value):
+    @y.setter
+    def y(self, value):
         """sets the value of y"""
         self.__y = value
