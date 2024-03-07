@@ -101,3 +101,8 @@ class Rectangle(Base):
             [res.append('#') for j in range(self.__width)]
             res.append('\n')
         print(''.join(res), end='')
+
+    def __str__(self):
+        """returns custom representation for instance of a class"""
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
