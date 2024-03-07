@@ -6,7 +6,7 @@ def append_after(filename="", search_string="", new_string=""):
     """appends a new_string to a file after a line containing
         search_string"""
 
-    with open(filename, mode='+', encoding='utf-8') as f:
+    with open(filename, mode='+r', encoding='utf-8') as f:
         line_list = []
         while True:
             line = f.readline()
