@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """this module imports parent class Base"""
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -108,3 +108,22 @@ class Rectangle(Base):
         """returns custom representation for instance of a class"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """assigns argument to each attribute"""
+        a = 0
+        for arg in args:
+            if a == 0:
+                if arg is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                else:
+                    self.id = arg
+            elif a == 1:
+                self.width = arg
+            elif a == 2:
+                self.height = arg
+            elif a == 3:
+                self.x = arg
+            elif a == 4:
+                self.y = arg
+            a += 1
