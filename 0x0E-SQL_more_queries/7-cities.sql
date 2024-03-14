@@ -1,0 +1,10 @@
+-- Create a database with table containing foreign key
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+-- switch to that database
+USE hbtn_0d_usa;
+-- create a table named cities
+CREATE TABLE IF NOT EXISTS cities(
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY UNIQUE,
+	state_id INT NOT NULL FOREIGN KEY REFERENCES states(id),
+	name VARCHAR(256) NOT NULL,
+	);
